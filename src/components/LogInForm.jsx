@@ -10,6 +10,7 @@ export default function LogInForm() {
 
     const submit = e => {
         e.preventDefault();
+        setResult('');
         if (isRegistration) {
             auth
                 .createUserWithEmailAndPassword(email, password)
