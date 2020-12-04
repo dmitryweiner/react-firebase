@@ -5,18 +5,28 @@ export default function LogInForm() {
     const auth = useAuth();
     const [isRegistration, setIsRegistration] = useState(false);
     const [email, setEmail] = useState('');
+    const [result, setResult] = useState('');
     const [password, setPassword]= useState('');
 
     const submit = e => {
         e.preventDefault();
         if (isRegistration) {
-            auth.createUserWithEmailAndPassword(email, password);
+            auth
+                .createUserWithEmailAndPassword(email, password)
+                .then(result => setResult(result.message))
+                .catch(result => setResult(result.message));
         } else {
-            auth.signInWithEmailAndPassword(email, password);
+            auth
+                .signInWithEmailAndPassword(email, password)
+                .then(result => setResult(result.message))
+                .catch(result => setResult(result.message));
         }
     };
 
     return <form onSubmit={submit}>
+        <div>
+            {result}
+        </div>
         <div>
             <label>
                 Email:
