@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b95a7b2f-1bb0-4a12-9917-6a582eee9a60" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatFirestore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatFirestore.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
       <workItem from="1607082117167" duration="701000" />
       <workItem from="1607227387998" duration="107000" />
       <workItem from="1607312768044" duration="1207000" />
-      <workItem from="1607335412435" duration="2108000" />
+      <workItem from="1607335412435" duration="4570000" />
     </task>
     <servers />
   </component>

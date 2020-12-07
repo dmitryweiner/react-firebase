@@ -12,7 +12,7 @@ export default function ChatFirestore() {
     const { data: user } = useUser();
     const [ content, setContent] = useState('');
     const messagesRef = useFirestore().collection('messages');
-    const { status, data: messages } = useFirestoreCollectionData(messagesRef);
+    const { status, data: messages } = useFirestoreCollectionData(messagesRef.orderBy('createdAt'));
     let revertedMessages = [];
     if (status !== 'loading') {
         revertedMessages = [...messages].reverse();
@@ -24,9 +24,13 @@ export default function ChatFirestore() {
 
     function submit(e) {
         e.preventDefault();
+
+        if (content.length === 0) return;
+
         messagesRef.doc().set({
             uid: user.uid,
             email: user.email,
+            createdAt: new Date(),
             content
         });
         setContent('');
