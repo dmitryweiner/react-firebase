@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import 'firebase/database';
+import 'firebase/firestore';
 import {
     useAuth,
-    useDatabase,
-    useDatabaseListData,
-    useUser
+    useUser,
+    useFirestore,
+    useFirestoreCollectionData
 } from 'reactfire';
 
-export default function Chat() {
+export default function ChatFirestore() {
     const auth = useAuth();
     const { data: user } = useUser();
     const [ content, setContent] = useState('');
-    const messagesRef = useDatabase().ref('messages');
-    const { status, data: messages } = useDatabaseListData(messagesRef);
+    const messagesRef = useFirestore().collection('messages');
+    const { status, data: messages } = useFirestoreCollectionData(messagesRef);
     let revertedMessages = [];
     if (status !== 'loading') {
         revertedMessages = [...messages].reverse();
@@ -24,11 +24,16 @@ export default function Chat() {
 
     function submit(e) {
         e.preventDefault();
-        messagesRef.push({
+        messagesRef.doc().set({
+            uid: user.uid,
             email: user.email,
             content
         });
         setContent('');
+    }
+
+    function deleteMessage(id) {
+        messagesRef.doc(id).delete();
     }
 
     return <>
@@ -50,6 +55,9 @@ export default function Chat() {
                                 {message.email}:&nbsp;
                             </b>
                             {message.content}
+                            {message.uid === user.uid && (
+                                <button onClick={() => deleteMessage(message.NO_ID_FIELD)}>[x]</button>
+                            )}
                         </li>
                     ))}
                 </ul>

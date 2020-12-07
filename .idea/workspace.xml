@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b95a7b2f-1bb0-4a12-9917-6a582eee9a60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/LogInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LogInForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -33,6 +35,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -48,6 +51,11 @@
       <option name="presentableId" value="Default" />
       <updated>1607064619488</updated>
       <workItem from="1607064621909" duration="7655000" />
+      <workItem from="1607081695451" duration="9000" />
+      <workItem from="1607082117167" duration="701000" />
+      <workItem from="1607227387998" duration="107000" />
+      <workItem from="1607312768044" duration="1207000" />
+      <workItem from="1607335412435" duration="2108000" />
     </task>
     <servers />
   </component>
@@ -64,5 +72,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
